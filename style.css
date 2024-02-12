@@ -55,15 +55,14 @@
 
 #word-logo #word-img {
   width: 5rem;
-  animation: word-logo 33s forwards;
-  transform: translateX(0%);
-  transition: transform 1s;
+  /* animation: word-logo 33s forwards; */
+  /* transition: transform 1s; */
   vertical-align: middle;
   position: relative;
   z-index: -1;
 }
 
-@keyframes colorChange {
+/* @keyframes colorChange {
   to {
     filter: hue-rotate(360deg);
   }
@@ -114,7 +113,7 @@
     transform: translateX(0%);
     width: 5rem;
   }
-}
+} */
 /* ----------------------------- */
 
 
