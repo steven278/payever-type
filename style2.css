@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+}
+
+.container {
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  /* background-color: yellow; */
+}
+
+#main-text{
+  font-size: 5rem;
+}
+
+#payever-logo{
+  width: 16rem;
+}
+
+/* first word ------------------------------*/
+
+#main-text #first {
+  position: relative;
+}
+
+#main-text #first:before {
+  content: "Make";
+}
+
+/* #main-text #first:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: yellow;
+    border-left: 2px solid #4399fa;
+    right: -8px;
+    animation: cursor .8s, typing-first-word 10s steps(8);
+    
+} */
+
+#main-text #first:after{
+  width: 22ch;
+  animation: typing 2s steps(5), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes first-word {
+  0%, 100% {
+    content: 'Make'
+  }
+}
+
+

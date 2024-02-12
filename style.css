@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+}
+
+.container {
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#main-text{
+  position: relative;
+  font-size: 5rem;
+}
+
+/* first word ------------------------------*/
+ 
+#main-text #first {
+  position: relative;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* payever logo */
+
+#payever-logo {
+  width: 0;
+  animation: payever-logo 1.5s ;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards; 
+  vertical-align: middle;
+}
+
+@keyframes payever-logo {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16rem;
+  }
+}
+
+/* --------------------------------------------- */
+
+/* word logo */
+
+
+#word-logo #word-img {
+  width: 5rem;
+  animation: word-logo 33s forwards;
+  transform: translateX(0%);
+  transition: transform 1s;
+  vertical-align: middle;
+  position: relative;
+  z-index: -1;
+}
+
+@keyframes colorChange {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes word-logo {
+  0%, 9.1% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  9.2%, 18.3% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  18.4%, 27.5% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  27.6%, 36.7% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  36.8%, 45.9% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  46%, 55.1% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  55.2%, 64.3% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  64.4%, 73.5% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  73.6%, 82.7% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+  82.8%, 92.2% {
+    transform: translateX(100%);
+    width: 15rem;
+  }
+  92.3%, 100% {
+    transform: translateX(0%);
+    width: 5rem;
+  }
+}
+/* ----------------------------- */
+
+
+/* last word */
+
+#main-text #last {
+  animation: last-word-color 30s forwards;
+  animation-delay: 3.5s;
+  transition: transform 1s;
+}
+
+@keyframes last-word-color{
+  0%, 9.1% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  9.2%, 18.3% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  18.4%, 27.5% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  27.6%, 36.7% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  36.8%, 45.9% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  46%, 55.1% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  55.2%, 64.3% {
+    color: gray;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  64.4%, 73.5% {
+    color: #2e93ff;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  73.6%, 82.7% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  82.8%, 92.2% {
+    color: black;
+    background-color: transparent;
+    border: 0px solid transparent;
+  }
+  92.3%, 100% {
+    color: black;
+    background-color: #bfd9f5;
+    border-left: 3px solid #2e93ff;
+    border-right: 3px solid #2e93ff;
+  }
+}
+/* --------------------------------------------- */
+
+/* last word cursor */
+
+#main-text #last #cursor {
+  position: relative;
+}
+
+#main-text #last #cursor:before {
+  content: "";
+  animation: words 30s forwards;
+  animation-delay: 3.5s;
+  transition: transform 1s ease-in-out;
+}
+
+
+@keyframes words {
+  0%, 9.1% {
+    content: 'impactful.'
+  }
+  9.2%, 18.3% {
+    content: 'successful.'
+  }
+  18.4%, 27.5% {
+    content: 'innovative.'
+  }
+  27.6%, 36.7% {
+    content: 'collaborative.'
+  }
+  36.8%, 45.9% {
+    content: 'productive.'
+  }
+  46%, 55.1% {
+    content: 'efficient.'
+  }
+  55.2%, 64.3% {
+    content: 'dynamic.'
+  }
+  64.4%, 73.5% {
+    content: 'inclusive.'
+  }
+  73.6%, 82.7% {
+    content: 'rewarding.'
+  }
+  82.8%, 92.2% {
+    content: 'sustainable.'
+  }
+  92.3%, 100% {
+    content: 'yours.'
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+    width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+}
+
+@keyframes cursor-type {
+  0%, 10% {
+    background-color: red;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  11%, 20% {
+    background-color: transparent;
+    border: 2px solid blue;
+  }
+  21%, 30% {
+    background-color: yellow;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  31%, 40% {
+    background-color: gray;
+  }
+  41%, 50% {
+    background-color: pink;
+  }
+  51%, 60% {
+    background-color: purple;
+  }
+  61%, 70% {
+    background-color: cyan;
+  }
+  71%, 80% {
+    background-color: brown;
+  }
+  81%, 90% {
+    background-color: orange;
+  }
+  91%, 100% {
+    background-color: violet;
+  }
+} 
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+    width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+} 
+
+/* ------------------------------------------ */
+
+/*responsive*/
+
+@media(min-width: 320px) {
+  #main-text{
+    font-size: 1.5rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 8rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 2rem;
+  }
+}
+
+@media(min-width: 480px) {
+  #main-text{
+    font-size: 2rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 9rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 2.5rem;
+  }
+}
+
+@media(min-width: 640px) {
+  #main-text{
+    font-size: 2.5rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 10rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 3rem;
+  }
+}
+
+@media(min-width: 768px) {
+  #main-text{
+    font-size: 3rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 11.5rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 3.5rem;
+  }
+}
+
+@media(min-width: 1024px) {
+  #main-text{
+    font-size: 3.5rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 13.5rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 4rem;
+  }
+}
+
+@media(min-width: 1280px) {
+  #main-text{
+    font-size: 4rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 15rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 4.5rem;
+  }
+}
+
+@media(min-width: 1536px) {
+  #main-text{
+    font-size: 5rem;
+  }
+  @keyframes payever-logo {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 16rem;
+    }
+  }
+  #word-logo #word-img {
+    width: 5rem;
+  }
+}
+
+/*------------------------------*/
